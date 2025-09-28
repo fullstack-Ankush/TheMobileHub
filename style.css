@@ -74,7 +74,7 @@ nav .nav-button:hover {
     padding: 2rem 5%;
     background: 
         linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.7) 100%),
-        url('hero\ section.png') no-repeat right center/cover;
+        url("hero section.png") no-repeat right center/cover;
     color: var(--text-light);
     text-align: left;
     gap: 2rem;
@@ -175,6 +175,54 @@ nav .nav-button:hover {
     font-weight: 600;
 }
 
+/* --- Appointment Form Styles --- */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-row label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-row input,
+.form-row textarea,
+.form-row select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: var(--font-poppins);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background: #fff;
+}
+
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.15);
+}
+
+.form-status {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.form-status.success { color: #0a7f3f; }
+.form-status.error { color: #b00020; }
+
 footer {
     text-align: center;
     padding: 1.5rem 5%;
@@ -214,11 +262,11 @@ footer {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 4rem 5% 2rem;
+        padding: 6rem 5% 2rem;
         min-height: auto;
         background: 
             linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
-            url('hero\ section.png') no-repeat center center/cover;
+            url("hero section.png") no-repeat center center/cover;
     }
 
     .hero-content {
@@ -249,4 +297,18 @@ footer {
     .contact-page {
         padding-top: 6rem;
     }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ensure content isn’t hidden behind fixed header on home page */
+.home-page main { padding-top: 4.5rem; }
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .hero h1 { font-size: 1.75rem; }
+    .hero p { font-size: 0.85rem; }
+    .cta-buttons { gap: 0.5rem; }
 }

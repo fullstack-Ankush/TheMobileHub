@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Appointment - The Mobile Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">The Mobile Hub</div>
+        <nav>
+            <a href="index.html" class="nav-button">Home</a>
+            <button id="map-button" class="nav-button">Location</button>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <h1>Book a Free Mobile Consultation</h1>
+        <div class="contact-card">
+            <h2>Appointment Form</h2>
+            <p>Fill in your details and we will confirm your free consultation.</p>
+
+            <form id="appointment-form" novalidate>
+                <div class="form-row">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. +91 98765 43210" required>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-row">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="time">Preferred Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your issue or request"></textarea>
+                </div>
+
+                <button type="submit" class="cta-btn" id="submit-btn">Book Appointment</button>
+                <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 The Mobile Hub. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+    
+</body>
+</html>
+
+
